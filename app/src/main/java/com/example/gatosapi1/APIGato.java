@@ -8,10 +8,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class APIGato {
-    private String BASE_URL="https://api.thecatapi.com/v1/images/search";
+    private String BASE_URL="https://api.thecatapi.com/v1";
 
     ArrayList<Gato> getGatos(){
-        Uri builtUri= Uri.parse(BASE_URL).buildUpon().build();
+        Uri builtUri= Uri.parse(BASE_URL)
+                .buildUpon()
+                .appendPath("images")
+                .appendPath("search")
+                .appendQueryParameter("limit","10")
+                .build();
         String url=builtUri.toString();
         return doCall(url);
     }
@@ -31,11 +36,18 @@ public class APIGato {
         ArrayList<Gato>listaGatos=new ArrayList<>();
 
         try {
-            JSONObject jsonObject= new JSONObject(Jresponse);
-            Gato gato=new Gato();
-            JSONObject gatoJson=jsonObject.getJSONObject("id");
-            gato.setId(gatoJson.getString("id"));
-            listaGatos.add(gato);
+
+            JSONArray jsonArray=new JSONArray(Jresponse);
+            for(int i=0;i<jsonArray.length();i++){
+                Gato gato=new Gato();
+                JSONObject gatoJson=jsonArray.getJSONObject(i);
+                gato.setId(gatoJson.getString("id"));
+                gato.setImage(gatoJson.getString("url"));
+                gato.setWeight(gatoJson.getInt("width"));
+                gato.setHeight(gatoJson.getInt("height"));
+                listaGatos.add(gato);
+
+            }
 
 
 

@@ -3,7 +3,7 @@ package com.example.gatosapi1;
 public class Gato {
 
     private String id,image;
-
+    private int weight,height;
     public String getId() {
         return id;
     }
@@ -36,5 +36,5 @@ public class Gato {
         this.height = height;
     }
 
-    private int weight,height;
+
 }
