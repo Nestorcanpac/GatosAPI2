@@ -6,10 +6,12 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.gatosapi1.databinding.FragmentFirstBinding;
@@ -49,6 +51,17 @@ public class FirstFragment extends Fragment {
         );
 
         binding.ListaGatos.setAdapter(gatoAdapter);
+        binding.ListaGatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Gato gatoSeleccionado=gatoAdapter.getItem(position);
+
+                Bundle args=new Bundle();
+                args.putString("ImagenGato",gatoSeleccionado.getImage());
+
+                Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment,args);
+            }
+        });
 
 
     }
