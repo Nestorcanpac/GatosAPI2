@@ -12,8 +12,10 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.gatosapi1.databinding.FragmentSecondBinding;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -35,6 +37,60 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Bundle args=getArguments();
+
+
+        binding.TamanoImagen.setText("El tamaño de la imagen es: "+args.getInt("GrandariaW")+"X"+args.getInt("GrandariaH"));
+        binding.NombreGato.setText(creaNombre());
+        binding.Atributos.setText(creaAtributos());
+        Picasso.get().load(args.getString("ImagenGato")).into(binding.ImagenGato);
+
+
+
+
+
+    }
+
+    public static String creaNombre(){
+        ArrayList<String>nombreGatos=new ArrayList<>();
+        nombreGatos.add("Po");
+        nombreGatos.add("Rupert");
+        nombreGatos.add("Enrique");
+        nombreGatos.add("Lala");
+        nombreGatos.add("Gorda");
+        nombreGatos.add("Gato");
+        nombreGatos.add("Eustaquio");
+        nombreGatos.add("Oreo");
+        nombreGatos.add("Pamela");
+        nombreGatos.add("Garfield");
+        Random random = new Random();
+        int numRan=random.nextInt(11);
+        String nomGato= nombreGatos.get(numRan);
+        return "Nombre: "+nomGato;
+    }
+
+    public static String creaAtributos(){
+        ArrayList<String> listaAdjetivos=new ArrayList<>();
+        listaAdjetivos.add("Tonto");
+        listaAdjetivos.add("Divertido");
+        listaAdjetivos.add("Mono");
+        listaAdjetivos.add("Gracioso");
+        listaAdjetivos.add("Peludo");
+        listaAdjetivos.add("Dormilon");
+        listaAdjetivos.add("Curioso");
+        listaAdjetivos.add("Sigiloso");
+        listaAdjetivos.add("Adorable");
+        listaAdjetivos.add("Cariñoso");
+        listaAdjetivos.add("Elegante");
+        Random random = new Random();
+        int numRan=random.nextInt(11);
+        int numRan2=random.nextInt(11);
+        int numRan3=random.nextInt(11);
+
+
+        return "Atributos: \n" +
+                "-"+listaAdjetivos.get(numRan)+"\n" +
+                "-"+listaAdjetivos.get(numRan2)+"\n" +
+                "-"+listaAdjetivos.get(numRan3);
 
 
 

@@ -58,6 +58,8 @@ public class FirstFragment extends Fragment {
 
                 Bundle args=new Bundle();
                 args.putString("ImagenGato",gatoSeleccionado.getImage());
+                args.putInt("GrandariaW",gatoSeleccionado.getWeight());
+                args.putInt("GrandariaH",gatoSeleccionado.getHeight());
 
                 Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment,args);
             }
