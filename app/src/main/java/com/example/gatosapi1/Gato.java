@@ -1,7 +1,12 @@
 package com.example.gatosapi1;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+@Entity
 public class Gato {
 
+    @PrimaryKey(autoGenerate = true)
+    private String id_real;
     private String id,image;
     private int weight,height;
     public String getId() {
@@ -36,5 +41,11 @@ public class Gato {
         this.height = height;
     }
 
+    public String getId_real() {
+        return id_real;
+    }
 
+    public void setId_real(String id_real) {
+        this.id_real = id_real;
+    }
 }

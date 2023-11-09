@@ -46,4 +46,23 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
     implementation("com.squareup.picasso:picasso:2.71828")
+
+    val lifecycle_version = "2.6.0-alpha02"
+    val arch_version = "2.1.0"
+
+// ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
+// LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata:$lifecycle_version")
+// Annotation processor
+// alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycle_version")
+
+    val room_version = "2.4.3"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+
+
 }
