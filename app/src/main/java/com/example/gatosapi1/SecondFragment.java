@@ -43,7 +43,7 @@ public class SecondFragment extends Fragment {
         Bundle args=getArguments();
 
 
-        binding.TamanoImagen.setText("El tamaño de la imagen es: "+args.getInt("GrandariaW")+"X"+args.getInt("GrandariaH"));
+
         binding.NombreGato.setText(creaNombre());
         binding.Atributos.setText(creaAtributos());
         Picasso.get().load(args.getString("ImagenGato")).into(binding.ImagenGato);

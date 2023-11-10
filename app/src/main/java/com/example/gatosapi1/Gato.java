@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 public class Gato {
 
     @PrimaryKey(autoGenerate = true)
-    private String id_real;
+    private int id_real;
     private String id,image;
     private int weight,height;
     public String getId() {
@@ -41,11 +41,11 @@ public class Gato {
         this.height = height;
     }
 
-    public String getId_real() {
+    public int getId_real() {
         return id_real;
     }
 
-    public void setId_real(String id_real) {
+    public void setId_real(int id_real) {
         this.id_real = id_real;
     }
 }
