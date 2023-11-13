@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Inicio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment_Inicio">
+    android:fillViewport="true"
+    tools:context=".SecondFragment">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="269dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImagenGatoInicio">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cONSTRAINTsECOND"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@drawable/fondogatosfinal">
+
+
+        <ImageView
+            android:id="@+id/ImagenGatoInicio"
+            android:layout_width="302dp"
+            android:layout_height="360dp"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/fondogatosfinal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/BotonInicio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ENTRA" />
-    </ScrollView>
+            android:layout_width="234dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="44dp"
+            android:text="EMPEZAR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImagenGatoInicio" />
 
-    <ImageView
-        android:id="@+id/ImagenGatoInicio"
-        android:layout_width="145dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="303dp"
+            android:layout_height="41dp"
+            android:text="API DE GATOS"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/ImagenGatoInicio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.225" />
 
-    <TextView
-        android:id="@+id/TextoHistorial"
-        android:layout_width="175dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="16dp"
-        android:text="Ultimo gato visto"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -11,7 +11,8 @@
         android:id="@+id/cONSTRAINTsECOND"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="@drawable/fondogatosfinal">
 
         <ImageView
             android:id="@+id/ImagenGato"
@@ -54,7 +55,7 @@
             android:id="@+id/BackInicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="ATRAS"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

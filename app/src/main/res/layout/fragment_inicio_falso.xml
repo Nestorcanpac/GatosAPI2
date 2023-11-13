@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondogatosfinal"
     tools:context=".InicioFalso" >
 
     <ImageView
         android:id="@+id/imagenLogo"
-        android:layout_width="104dp"
-        android:layout_height="94dp"
+        android:layout_width="128dp"
+        android:layout_height="144dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -34,6 +35,7 @@
         android:layout_marginTop="24dp"
         android:text="Ultimo Gato visto:"
         android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +43,8 @@
 
     <ImageView
         android:id="@+id/ImagenFalsa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="188dp"
+        android:layout_height="172dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
