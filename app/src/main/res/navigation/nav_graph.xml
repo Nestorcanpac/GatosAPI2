@@ -27,14 +27,26 @@
         <action
             android:id="@+id/action_SecondFragment_to_fragment_Inicio"
             app:destination="@id/fragment_Inicio" />
+        <action
+            android:id="@+id/action_SecondFragment_to_inicioFalso"
+            app:destination="@id/inicioFalso" />
     </fragment>
     <fragment
         android:id="@+id/fragment_Inicio"
         android:name="com.example.gatosapi1.Fragment_Inicio"
-        android:label="Ten huevos a entrar"
+        android:label="Inicio"
         tools:layout="@layout/fragment__inicio">
         <action
             android:id="@+id/action_fragment_Inicio_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFalso"
+        android:name="com.example.gatosapi1.InicioFalso"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio_falso">
+        <action
+            android:id="@+id/action_inicioFalso_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

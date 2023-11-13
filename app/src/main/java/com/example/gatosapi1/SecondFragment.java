@@ -51,7 +51,7 @@ public class SecondFragment extends Fragment {
         Picasso.get().load(args2.getString("ImagenGato")).into(binding.ImagenGato);
         binding.BackInicio.setOnClickListener(v -> {
             NavController navController= Navigation.findNavController(view);
-            navController.navigate(R.id.action_SecondFragment_to_fragment_Inicio,args2);
+            navController.navigate(R.id.action_SecondFragment_to_inicioFalso,args2);
         });
 
 
