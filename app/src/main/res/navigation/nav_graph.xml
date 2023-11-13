@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/fragment_Inicio">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -23,6 +23,18 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_fragment_Inicio"
+            app:destination="@id/fragment_Inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Inicio"
+        android:name="com.example.gatosapi1.Fragment_Inicio"
+        android:label="Ten huevos a entrar"
+        tools:layout="@layout/fragment__inicio">
+        <action
+            android:id="@+id/action_fragment_Inicio_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

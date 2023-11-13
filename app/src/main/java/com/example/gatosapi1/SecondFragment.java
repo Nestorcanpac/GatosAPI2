@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.gatosapi1.databinding.FragmentSecondBinding;
@@ -40,13 +42,19 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Bundle args=getArguments();
+        Bundle args2=getArguments();
 
 
 
         binding.NombreGato.setText(creaNombre());
         binding.Atributos.setText(creaAtributos());
-        Picasso.get().load(args.getString("ImagenGato")).into(binding.ImagenGato);
+        Picasso.get().load(args2.getString("ImagenGato")).into(binding.ImagenGato);
+        binding.BackInicio.setOnClickListener(v -> {
+            NavController navController= Navigation.findNavController(view);
+            navController.navigate(R.id.action_SecondFragment_to_fragment_Inicio,args2);
+        });
+
+
 
 
 
