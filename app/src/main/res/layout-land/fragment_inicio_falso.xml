@@ -9,11 +9,10 @@
 
     <ImageView
         android:id="@+id/imagenLogo"
-        android:layout_width="128dp"
-        android:layout_height="144dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_width="182dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
@@ -22,32 +21,31 @@
         android:id="@+id/BackButton"
         android:layout_width="207dp"
         android:layout_height="50dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="ENTRA"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
 
     <TextView
         android:id="@+id/TextoHystorFalso"
-        android:layout_width="207dp"
-        android:layout_height="29dp"
+        android:layout_width="245dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
         android:text="Ultimo Gato visto:"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ImagenFalsa"
         android:layout_width="188dp"
         android:layout_height="172dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="45dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextoHystorFalso"
         tools:src="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
