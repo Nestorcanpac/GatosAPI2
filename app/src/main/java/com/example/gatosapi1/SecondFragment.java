@@ -70,8 +70,12 @@ public class SecondFragment extends Fragment {
         nombreGatos.add("Oreo");
         nombreGatos.add("Pamela");
         nombreGatos.add("Garfield");
+        nombreGatos.add("Pelusón");
+        nombreGatos.add("Chispitas");
+        nombreGatos.add("Zeta");
+        nombreGatos.add("Nala");
         Random random = new Random();
-        int numRan=random.nextInt(11);
+        int numRan=random.nextInt(14);
         String nomGato= nombreGatos.get(numRan);
         return "Nombre: "+nomGato;
     }
@@ -89,10 +93,15 @@ public class SecondFragment extends Fragment {
         listaAdjetivos.add("Adorable");
         listaAdjetivos.add("Cariñoso");
         listaAdjetivos.add("Elegante");
+        listaAdjetivos.add("Listo");
+        listaAdjetivos.add("Atento");
+        listaAdjetivos.add("Saltarin");
+        listaAdjetivos.add("Atrevido");
+        listaAdjetivos.add("Pequeño");
         Random random = new Random();
-        int numRan=random.nextInt(11);
-        int numRan2=random.nextInt(11);
-        int numRan3=random.nextInt(11);
+        int numRan=random.nextInt(16);
+        int numRan2=random.nextInt(16);
+        int numRan3=random.nextInt(16);
 
 
         return "Atributos: \n" +
